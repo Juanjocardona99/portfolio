@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Taco Truck Madness</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../../index.html" class="logo"><strong>Home</strong></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../../index.html">Home</a></li>
+						<li><a href="../../index.html#one">Projects</a></li>
+						<li><a href="../../index.html#two">About</a></li>
+					</ul>
+				</nav>
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="../../images/taco_truck/taco_truck_showcase.png" alt="aiuda" />
+							</span>
+							<header class="major">
+								<h1>Taco Truck Madness</h1>
+							</header>
+							<div class="content">
+								<p> A fast paced and fun VR game made with unity.
+								</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>About</h2>
+									</header>
+									<p>Taco truck madness is a VR game where you have to cook tacos quickly to serve customers. A list of orders
+										will tell you what to make and your remaining time. Your available ingredients are: Meat, onion, pineapple, cheese and sauce.
+										Cook tortilas, protect your ingredients from rats and finish your orders quickly to stay in business!
+									</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="" class="image">
+										<img src="../../images/taco_truck/taco_truck_image.png" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Making Of</h3>
+											</header>
+											<p>The project took 4 weeks to make, it was a collaboration between 6 teammates, we used Jira to manage
+												the project and github for our version control.
+											</p>
+											<ul class="actions">
+												<li><a href="https://youtu.be/z51wPuwrW6U" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://www.youtube.com/watch?v=q0_fcqBn9Po" class="image">
+										<img src="../../images/taco_truck/tacotruck1.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Cuttable Component</h3>
+											</header>
+											<p>My task within the project was to create a component that made the ingredients cuttable, making them separatable in up to 8 different pieces.</p>
+											<ul class="actions">
+												<li><a href="https://www.youtube.com/watch?v=q0_fcqBn9Po" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>More</h2>
+									</header>
+									<p>
+										The cutting system of the game consists in two things: Cutter and cuttable
+										Cutter is a component that emits a raycast and uppon detection of a cuttable object starts a cut.
+										Cuttable works by having three different trigger zones that are generated automatically: two vertical ones for axis XY and ZY and an horizontal one for XZ.
+										With this and using the distance between the initial point of contact and the last point of contact I can detect if the knife has cut.
+										Then the model will be separated and the cuttable component will be added to the new halves so they are cuttable too.
+
+									</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=q0_fcqBn9Po" class="button next">Learn More</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+			<!-- Contact -->
+			<section id="contact">
+				<div class="inner">
+					<section>
+						<img src="../../images/photo.jpg" alt="myself">
+					</section>
+					<section class="split">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="">juanjo.business@outlook.com</a>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-phone"></span>
+								<h3>Phone</h3>
+								<span>(514) 582-8218</span>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-home"></span>
+								<h3>Address</h3>
+								Montreal, QC H2L4H2<br />
+								Canada</span>
+							</div>
+						</section>
+					</section>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/Juanjocardona99" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/juancardonavg" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
