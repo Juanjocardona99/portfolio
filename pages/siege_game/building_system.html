@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Modular Building</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<a href="../../index.html" class="logo"><strong>Home</strong></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../index.html#one">Projects</a></li>
+				<li><a href="../../index.html#two">About</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Building System</h1>
+					</header>
+					<h2 id="content">Grid Building</h2>
+					<p>
+						<span class="image left">
+							<img src="../../images/Siege_Game/building showcase.png" alt="Building Grid Image" />
+						</span>
+
+						The building system in the game consists of two tilemap grids. The first 
+						of the two grids is the permanent building grid. It has to be filled with 
+						white and red tiles, white tiles represent available spaces and red tiles 
+						represent obstructed spaces. The second grid is the temporary building 
+						grid which is empty. Whenever the building button is pressed 
+						(Q by default) both grids are rendered and a menu will appear from the 
+						bottom of the screen containing all the buildings available with their 
+						respective costs. The building previews can be clicked, when doing so 
+						the preview will start following the mouse snapping to the grid.
+
+						<br><br>
+
+						<span class="image right">
+							<img src="../../images/Siege_Game/building_correct_placing.png" alt="Building Grid Image" />
+						</span>
+
+						The system will check for the necessary conditions of the selected building 
+						(available materials, building place validity and available spaces) if one 
+						of them is incorrect it will paint the surrounding area of the temporary 
+						grid in red, otherwise if all conditions are proper it will color the area 
+						green. When the user left clicks the building will be placed, Initialized 
+						and passed to the building manager so it can be updated every frame.
+						
+						<br><br>
+
+						<span class="image left">
+							<img src="../../images/Siege_Game/placed_building.png" alt="Building Grid Image" />
+						</span>
+
+						After a building is placed, the system will paint the area occupied by the 
+						building red on the permanent building grid, so next time the user tries 
+						to place a new building, the area where there are already buildings will 
+						detected by the system as an invalid position and won't allow another 
+						building to be placed in this position. This is to avoid building 
+						superposition which would break the game.
+						
+						<br><br><br>
+					</p>
+				</div>
+			</section>
+			<section id="two">
+				<div class="inner">
+					<h2 id="content">Modular Building</h2>
+					<p>
+						<span class="image left">
+							<img src="../../images/Siege_Game/ballista_incorrect_position_floor.png" alt="Building Grid Image" />
+						</span>
+
+						Buildings in this game are modular, when you have a placed wall modules 
+						of buildings like the ballista can be stacked on top. For this to work I 
+						implemented a valid position system that marks where a building can be 
+						placed. Two raycasts on the bottom of the selected building will detect 
+						what type of position is under the selected building. For example the 
+						wall requires to be placed on the ground so it will only be placeable 
+						when both raycasts detect ground beneath it.
+
+						<br><br>
+
+						<span class="image right">
+							<img src="../../images/Siege_Game/ballista_corner_invalid.png" alt="Building Grid Image" />
+						</span>
+
+						<br><br>
+
+						The reason why there are two raycasts instead of just one is to avoid 
+						placing a building when they are halfway on top of a wall. If only one 
+						raycas was being checked the position of the image here could be valid. 
+						By placing one raycast in each corner checking if the element bellow is 
+						a valid spot, only the correct posistion perfectly on top will be valid.
+
+						<br><br>
+
+						<span class="image left">
+							<img src="../../images/Siege_Game/ballista_correct_position.png" alt="Building Grid Image" />
+						</span>
+
+						<span class="image left">
+							<img src="../../images/Siege_Game/wall_ballistas.png" alt="Building Grid Image" />
+						</span>
+						<br>
+						
+						This way the ballista will be only placeable on top of a wall, 
+						the ballista itself is also a "wall" valid position, so you can 
+						stack modules as much as you want. This gives the player the ability 
+						to modify is playstyle by combining various types of buildings to 
+						deffend themselves from the hordes of enemies.
+						
+					</p>
+					<br><br><br><br>
+				</div>
+			</section>
+
+		</div>
+		
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<img src="../../images/photo.jpg" alt="myself">
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="">juanjo.business@outlook.com</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>Phone</h3>
+							<span>(514) 582-8218</span>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							Montreal, QC H2L4H2<br />
+							Canada</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
